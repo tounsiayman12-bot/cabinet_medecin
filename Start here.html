@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Clinic - Documentation Hub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .logo {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #2563eb, #0891b2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 3rem;
+        }
+        
+        h1 {
+            color: #2563eb;
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+        
+        .subtitle {
+            color: #6b7280;
+            font-size: 1.125rem;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: all 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+        
+        .card-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        .card.primary .card-icon {
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(8, 145, 178, 0.1));
+            color: #2563eb;
+        }
+        
+        .card.success .card-icon {
+            background: rgba(16, 185, 129, 0.1);
+            color: #10b981;
+        }
+        
+        .card.warning .card-icon {
+            background: rgba(245, 158, 11, 0.1);
+            color: #f59e0b;
+        }
+        
+        .card.danger .card-icon {
+            background: rgba(239, 68, 68, 0.1);
+            color: #ef4444;
+        }
+        
+        .card h3 {
+            color: #1f2937;
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+        
+        .card p {
+            color: #6b7280;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .btn:hover {
+            background: #1e40af;
+            transform: translateY(-2px);
+        }
+        
+        .btn.success {
+            background: #10b981;
+        }
+        
+        .btn.success:hover {
+            background: #059669;
+        }
+        
+        .btn.warning {
+            background: #f59e0b;
+        }
+        
+        .btn.warning:hover {
+            background: #d97706;
+        }
+        
+        .btn.danger {
+            background: #ef4444;
+        }
+        
+        .btn.danger:hover {
+            background: #dc2626;
+        }
+        
+        .alert {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            border-left: 4px solid #f59e0b;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .alert h4 {
+            color: #f59e0b;
+            margin-bottom: 10px;
+        }
+        
+        .footer {
+            text-align: center;
+            color: white;
+            margin-top: 40px;
+            padding: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">❤️‍🩹</div>
+            <h1>Medical Clinic Management</h1>
+            <p class="subtitle">Centre de Documentation & Ressources</p>
+        </div>
+        
+        <div class="alert">
+            <h4>⚠️ Première Installation ?</h4>
+            <p><strong>Problème de connexion "Identifiants incorrects" ?</strong></p>
+            <p>Cliquez sur <strong>"🔧 Fix Passwords"</strong> ci-dessous pour corriger automatiquement les mots de passe !</p>
+        </div>
+        
+        <div class="grid">
+            <!-- Main Application -->
+            <div class="card primary">
+                <div class="card-icon">🏥</div>
+                <h3>Application Principale</h3>
+                <p>Accédez à la plateforme de gestion médicale. Connexion pour médecins, secrétaires et patients.</p>
+                <a href="index.php" class="btn">Ouvrir l'Application</a>
+            </div>
+            
+            <!-- Fix Passwords -->
+            <div class="card danger">
+                <div class="card-icon">🔧</div>
+                <h3>Fix Passwords</h3>
+                <p>Script automatique pour corriger les mots de passe. <strong>À exécuter en premier si login ne marche pas!</strong></p>
+                <a href="fix_passwords.php" class="btn danger">Fix Passwords Now</a>
+            </div>
+            
+            <!-- Installation Check -->
+            <div class="card success">
+                <div class="card-icon">✅</div>
+                <h3>Vérification Installation</h3>
+                <p>Vérifiez que tous les composants sont correctement installés et configurés.</p>
+                <a href="install_check.php" class="btn success">Lancer la Vérification</a>
+            </div>
+            
+            <!-- Password Generator -->
+            <div class="card warning">
+                <div class="card-icon">🔐</div>
+                <h3>Générateur de Hash</h3>
+                <p>Générez des hashes de mots de passe sécurisés pour mettre à jour la base de données manuellement.</p>
+                <a href="generate_hash.php" class="btn warning">Générer Hash</a>
+            </div>
+        </div>
+        
+        <div class="grid">
+            <!-- Quick Start Guide -->
+            <div class="card primary">
+                <div class="card-icon">🚀</div>
+                <h3>Guide de Démarrage Rapide</h3>
+                <p>Installation en 5 minutes avec toutes les étapes essentielles.</p>
+                <a href="QUICK_START.md" class="btn" target="_blank">Lire le Guide</a>
+            </div>
+            
+            <!-- Full Documentation -->
+            <div class="card primary">
+                <div class="card-icon">📚</div>
+                <h3>Documentation Complète</h3>
+                <p>Guide détaillé avec toutes les fonctionnalités et configurations.</p>
+                <a href="README.md" class="btn" target="_blank">Voir README</a>
+            </div>
+            
+            <!-- Troubleshooting -->
+            <div class="card danger">
+                <div class="card-icon">🆘</div>
+                <h3>Dépannage</h3>
+                <p>Solutions aux problèmes courants, spécialement pour les erreurs de connexion.</p>
+                <a href="TROUBLESHOOTING.md" class="btn danger" target="_blank">Guide Dépannage</a>
+            </div>
+            
+            <!-- Project Summary -->
+            <div class="card success">
+                <div class="card-icon">📊</div>
+                <h3>Résumé du Projet</h3>
+                <p>Vue d'ensemble complète du projet avec statistiques et architecture.</p>
+                <a href="PROJECT_SUMMARY.md" class="btn success" target="_blank">Voir le Résumé</a>
+            </div>
+        </div>
+        
+        <div class="card" style="background: linear-gradient(135deg, #2563eb, #0891b2); color: white;">
+            <h3 style="color: white;">🎯 Identifiants par Défaut</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 20px;">
+                <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px;">
+                    <h4 style="color: white; margin-bottom: 10px;">👨‍⚕️ Médecin</h4>
+                    <p style="margin-bottom: 5px;"><strong>Username:</strong> fares</p>
+                    <p><strong>Password:</strong> fares123</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px;">
+                    <h4 style="color: white; margin-bottom: 10px;">👔 Secrétaire</h4>
+                    <p style="margin-bottom: 5px;"><strong>Username:</strong> dalanda</p>
+                    <p><strong>Password:</strong> dalanda123</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px;">
+                    <h4 style="color: white; margin-bottom: 10px;">🧑‍🤝‍🧑 Patient</h4>
+                    <p style="margin-bottom: 5px;"><strong>S'inscrire:</strong> Nouveau compte</p>
+                    <p><strong>Login:</strong> Téléphone + Password</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h3>📋 Checklist d'Installation</h3>
+            <ol style="color: #6b7280; line-height: 2;">
+                <li>✅ XAMPP installé et démarré (Apache + MySQL)</li>
+                <li>✅ Fichiers copiés dans <code>C:\xampp\htdocs\medical_clinic</code></li>
+                <li>✅ Base de données créée et <code>database.sql</code> importé</li>
+                <li>⚠️ <strong>Exécuter <a href="fix_passwords.php" style="color: #ef4444;">fix_passwords.php</a></strong></li>
+                <li>✅ Vérification avec <code>install_check.php</code></li>
+                <li>✅ Test de connexion avec identifiants par défaut</li>
+            </ol>
+        </div>
+        
+        <div class="card" style="background: #fef3c7; border-left: 4px solid #f59e0b;">
+            <h3 style="color: #f59e0b;">⚡ Actions Rapides</h3>
+            <div style="margin-top: 15px;">
+                <p style="color: #92400e; margin-bottom: 10px;"><strong>En cas de problème de connexion :</strong></p>
+                <ol style="color: #92400e; line-height: 1.8;">
+                    <li>Cliquez sur <a href="fix_passwords.php" style="color: #f59e0b; font-weight: bold;">Fix Passwords</a></li>
+                    <li>Attendez les messages de confirmation ✅</li>
+                    <li>Retournez sur <a href="index.php" style="color: #f59e0b; font-weight: bold;">la page de connexion</a></li>
+                    <li>Connectez-vous avec : fares / fares123</li>
+                </ol>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p><strong>Medical Clinic Management Platform</strong></p>
+            <p>Version 1.0.0 | Janvier 2026</p>
+            <p style="margin-top: 10px; opacity: 0.8;">
+                📞 Besoin d'aide ? Consultez <a href="TROUBLESHOOTING.md" style="color: white; text-decoration: underline;">TROUBLESHOOTING.md</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
